@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <launch>
-	<arg name="semantic_map_namespace"	 	default="generic_map" /> <!-- <demonstrations_set>_map, etc. NOTE THAT IT MUST BE ADDED TO know_demo/src/__init__.pl-->
+	<arg name="semantic_map_namespace"	 	default="generic_map" /> <!-- <demonstrations_set>_map, etc. NOTE THAT IT MUST BE ADDED TO know_memory/src/__init__.pl-->
 	<arg name="keep_node_running"	 	default="True" />
-	<arg name="store_neem"	 	default="False" />
-	<arg name="dataset_name"	 	default="plans_general_properties" /> <!-- note that there shall be a file in the csv folder with the same name (without the '.csv')-->
+	<arg name="store_neem"	 	default="True" />
+	<arg name="dataset_name"	 	default="collaborative_ssd_case_inspection_general_properties" /> <!-- note that there shall be a file in the csv folder with the same name (without the '.csv', e.g. plans_general_properties)-->
 
 	<!-- Include a generic map knowledge base -->
-	<include file="$(find know_demo)/launch/generic_semantic_map.launch">
+	<include file="$(find know_memory)/launch/generic_semantic_map.launch">
 		<!-- .. -->
 	</include>
 
 	<!-- Include memory generation node -->
-	<node name="memory_generation_from_data_node" pkg="know_demo" type="memory_generation_from_data.py" output="screen">
+	<node name="memory_generation_from_data_node" pkg="know_memory" type="memory_generation_from_data.py" output="screen">
 		<param name="semantic_map_namespace" value="$(arg semantic_map_namespace)" /> 
 		<param name="store_neem" value="$(arg store_neem)" /> 
 		<param name="dataset_name" value="$(arg dataset_name)" /> 

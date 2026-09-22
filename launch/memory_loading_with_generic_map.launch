@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <launch>
-	<arg name="semantic_map_namespace"	 	default="generic_map" /> <!-- <demonstrations_set>_map, etc. NOTE THAT IT MUST BE ADDED TO know_demo/src/__init__.pl-->
-	<arg name="owl_file" default="$(find know_demo)/owl/maps/generic_semantic_map.owl" />
-	<arg name="neem_folder" default="$(find know_demo)/neem/plans_general_properties_1754570166.8068643/roslog" />
+	<arg name="semantic_map_namespace"	 	default="generic_map" /> <!-- <demonstrations_set>_map, etc. NOTE THAT IT MUST BE ADDED TO know_memory/src/__init__.pl-->
+	<arg name="owl_file" default="$(find know_memory)/owl/maps/generic_semantic_map.owl" />
+	<arg name="neem_folder" default="$(find know_memory)/neem/collaborative_ssd_case_inspection_general_properties_1759153624.2274432/roslog" /> <!-- ' plans_general_properties_1754570166.8068643 '     ' collaborative_ssd_case_inspection_general_properties_1759153624.2274432 ' -->
 
 	<!-- Include a generic map knowledge base -->
-	<include file="$(find know_demo)/launch/generic_semantic_map.launch">
+	<include file="$(find know_memory)/launch/generic_semantic_map.launch">
 		<arg name="initial_goal" default="load_owl('$(arg owl_file)'), mng_restore(roslog, '$(arg neem_folder)')." />
 	</include>
 </launch>
