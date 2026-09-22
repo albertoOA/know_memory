@@ -1,5 +1,5 @@
 <package>
-  <name>know_demo</name>
+  <name>know_memory</name>
   <version>1.0.0</version>
   <description>Basic package to create, store, and utilize demonstration-based episodic memories as an ontological knowledge base.
   </description>

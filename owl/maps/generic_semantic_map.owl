@@ -31,9 +31,9 @@
     <owl:Ontology rdf:about="http://www.iri.upc.edu/groups/perception/OCRA/maps/generic.owl#">
         <owl:imports rdf:resource="package://knowrob/owl/knowrob.owl"/>
         <owl:imports rdf:resource="http://www.iri.upc.edu/groups/perception/OCRA/ont/ocra.owl"/>
-        <owl:imports rdf:resource="package://know_demo/owl/ocra_common.owl"/>
+        <owl:imports rdf:resource="package://know_memory/owl/ocra_common.owl"/>
         <!--
-        <owl:imports rdf:resource="package://know_demo/owl/ocra.owl"/>
+        <owl:imports rdf:resource="package://know_memory/owl/ocra.owl"/>
 
         -->
     </owl:Ontology>

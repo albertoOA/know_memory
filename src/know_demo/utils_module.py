@@ -15,7 +15,7 @@ from rosprolog_client import PrologException, Prolog
 
 class generalUtils:
     def __init__(self):
-        self.main_path = rospkg.RosPack().get_path('know_demo')
+        self.main_path = rospkg.RosPack().get_path('know_memory')
         self.csv_file_path = self.main_path + "/csv"
         self.ontology_entity_to_compare = "PlanID" #it must match the name in the csv (e.g. 'PlanID')
 
@@ -120,7 +120,7 @@ class generalUtils:
    
 class rosprologUtils:
     def __init__(self):
-        self.main_path = rospkg.RosPack().get_path('know_demo')
+        self.main_path = rospkg.RosPack().get_path('know_memory')
         self.csv_file_path = self.main_path + "/csv"
         self.ontology_entity_to_compare = "PlanID" #it must match the name in the csv (e.g. 'PlanID')
 

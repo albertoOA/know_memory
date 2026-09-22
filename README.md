@@ -51,7 +51,7 @@ This example runs a node that reads an episodic memory containing knowledge abou
 **Note** that you will need to unzip the example neem before running the launch file. Alternatively, you can run the *memory genration* example setting to 'True' the storage of a NEEM, then, you will need to update the neem folder name in the launch that will load it. 
 
 ```
-roslaunch know_demo memory_loading_with_generic_map.launch 
+roslaunch know_memory memory_loading_with_generic_map.launch 
 ``` 
 
 for the reasoning, we use the ssh file!!

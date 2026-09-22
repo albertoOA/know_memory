@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 2.8.3)
-project(know_demo)
+project(know_memory)
 
 SET(OCRA_VERSION "1.0.0")
 set(OCRA_DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/owl")

@@ -5,7 +5,7 @@
 import sys
 import rospy
 
-from know_demo.utils_module import generalUtils, rosprologUtils
+from know_memory.utils_module import generalUtils, rosprologUtils
 
 if __name__ == "__main__":
     rospy.init_node("memory_generation_from_data_node", sys.argv)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     # save the NEEM using in the name 'dataset_name' and the current time
     if store_neem:
-        query_string_foo_ = "ros_package_path('know_demo', P1), \
+        query_string_foo_ = "ros_package_path('know_memory', P1), \
             atom_concat(P1, '/neem/"+ dataset_name +"_' , P2), \
             get_time(T), atom_concat(P2, T, P3), mng_dump(roslog, P3)."
         rosprolog_utils_object.rosprolog_assertion_query(query_string_foo_)

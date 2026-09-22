@@ -26,10 +26,10 @@
 */
 
 :- register_ros_package(knowrob).
-:- register_ros_package(know_demo).
+:- register_ros_package(know_memory).
 
 % register ROS packages to resolve IRI prefixes to local paths
-:- ros_package_iri(know_demo, 'http://www.iri.upc.edu/groups/perception/OCRA/ont').
+:- ros_package_iri(know_memory, 'http://www.iri.upc.edu/groups/perception/OCRA/ont').
 
 :- use_module(library('semweb/rdf_db'), 
     [ rdf_equal/2, rdf_register_ns/3 ]).
