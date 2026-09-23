@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="owl_file" default="$(find know_memory)/owl/maps/generic_semantic_map.owl" />
+	<arg name="dataset_name"	 	default="collaborative_ssd_case_inspection_general_properties" /> <!-- note that there shall be a file in the csv folder with the same name (without the '.csv', e.g. plans_general_properties)-->
+	<arg name="neem_folder" default="$(find know_memory)/neem/$(arg dataset_name)_1759153624.2274432/roslog" /> <!-- ' plans_general_properties_1754570166.8068643 '     ' collaborative_ssd_case_inspection_general_properties_1759153624.2274432 ' -->
+	<arg name="keep_node_running"	 	default="True" />
+
+	<!-- Include a generic map knowledge base -->
+	<include file="$(find know_memory)/launch/generic_semantic_map.launch">
+		<arg name="initial_goal" default="load_owl('$(arg owl_file)'), mng_restore(roslog, '$(arg neem_folder)')." />
+	</include>
+
+	<!-- Include memory export node -->
+	<node name="graph_memory_export_from_knowledge_base" pkg="know_memory" type="graph_memory_export_from_knowledge_base.py" output="screen">
+		<param name="keep_node_running" value="$(arg keep_node_running)" /> 
+		<param name="dataset_name" value="$(arg dataset_name)" /> 
+    </node>
+</launch>
