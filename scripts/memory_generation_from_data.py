@@ -9,7 +9,7 @@ from know_memory.utils_module import generalUtils, rosprologUtils
 
 if __name__ == "__main__":
     rospy.init_node("memory_generation_from_data_node", sys.argv)
-    rospy.loginfo(rospy.get_name() + ": a know-demo node has been initialized.")
+    rospy.loginfo(rospy.get_name() + ": a know-memory node has been initialized.")
     
     general_utils_object = generalUtils()
     rosprolog_utils_object = rosprologUtils()
