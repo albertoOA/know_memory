@@ -3,7 +3,7 @@
 A software framework designed to create, store, and utilize long-term explicit memories as an ontological knowledge base. It enables autonomous agents (e.g. robots) to record, organize, and reason about sequential task demonstrations or executions, directly supporting applications in robot learning, behavior introspection, and adaptive long-term task execution.
 
 
-This package allows to run the knowledge base using rosprolog (a ROS package), which includes features to be used within ROS (e.g., one can query the knowledge base calling a ROS service).
+This package allows to run the knowledge base using rosprolog (a ROS package developed within the [KnowRob](https://github.com/knowrob/knowrob) framework), which includes features to be used within ROS (e.g., one can query the knowledge base calling a ROS service). 
 
 
 ### Python3 virtual environment configuration and dependencies
